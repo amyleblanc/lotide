@@ -1,4 +1,3 @@
-
 const assertEqual = function(actual, expected) {
   actual === expected ? console.log(`🥳 Assertion Passed: ${actual} === ${expected}`) : console.log("🤬 Assertion Failed: " + actual + " !== " + expected);  // TERNARY OPERATOR
 };
@@ -21,3 +20,4 @@ assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // => should FAIL
 assertEqual(eqArrays([6], [6]), true); // => should PASS
 assertEqual(eqArrays([3, 4], [3, -4]), true); // => should FAIL
 
+// module.exports = eqArrays;
