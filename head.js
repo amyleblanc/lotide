@@ -1,8 +1,8 @@
 const assertEqual = function(actual, expected) {
   /*if (actual === expected) {
-    console.log(`🥳 Assertion Passed: ${actual} === ${expected}`); // STRING INTERPOLATION
+    console.log(`🥳 Assertion Passed: ${actual} === ${expected}`); // STRING INTERPOLATION VERSION
   } else {
-    console.log("🤬 Assertion Failed: " + actual + " !== " + expected);  // ORIGINAL CODE
+    console.log("🤬 Assertion Failed: " + actual + " !== " + expected);  // ORIGINAL CODE VERSION
   }
   */
   actual === expected ? console.log(`🥳 Assertion Passed: ${actual} === ${expected}`) : console.log("🤬 Assertion Failed: " + actual + " !== " + expected);  // TERNARY OPERATOR
