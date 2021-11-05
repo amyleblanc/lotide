@@ -8,5 +8,3 @@ const assertEqual = function(actual, expected) {
 // assertEqual(1, 1);
 // assertEqual("Bootcamp", "Bootcamp");
 // assertEqual(2, 1);
-
-//end
