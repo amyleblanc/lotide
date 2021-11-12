@@ -1,7 +1,3 @@
-const assertEqual = function(actual, expected) {
-  actual === expected ? console.log(`🥳 Assertion Passed: ${actual} === ${expected}`) : console.log("🤬 Assertion Failed: " + actual + " !== " + expected);  // TERNARY OPERATOR
-};
-
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
   for (const item of allItems) {
@@ -15,21 +11,27 @@ const countOnly = function(allItems, itemsToCount) {
   }
   return results;
 };
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
 
-const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
-console.log(result1);
-assertEqual(result1["Jason"], 1);
-assertEqual(result1["Karima"], undefined);
-assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);
+module.exports = countOnly;
+
+// TEST CODE
+// const _ = require('./index');
+
+// const firstNames = [
+//   "Karl",
+//   "Salima",
+//   "Agouhanna",
+//   "Fang",
+//   "Kavith",
+//   "Jason",
+//   "Salima",
+//   "Fang",
+//   "Joe"
+// ];
+
+// const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+// console.log(result1);
+// _.assertEqual(result1["Jason"], 1);
+// _.assertEqual(result1["Karima"], undefined);
+// _.assertEqual(result1["Fang"], 2);
+// _.assertEqual(result1["Agouhanna"], undefined);

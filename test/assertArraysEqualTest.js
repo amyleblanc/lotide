@@ -1,5 +1,5 @@
-const assertArraysEqual = require('../assertArraysEqual');
+const _ = require('../index');
 
 // TEST CODE:
-assertArraysEqual([1, 2, 3], [1, 2, 3]); // TRUE
-assertArraysEqual([1, 2, 3], [1, 2, 2]); // FALSE
+_.assertArraysEqual([1, 2, 3], [1, 2, 3]); // TRUE
+_.assertArraysEqual([1, 2, 3], [1, 2, 2]); // FALSE
