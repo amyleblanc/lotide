@@ -1,4 +1,4 @@
-const words = ["ground", "control", "to", "major", "tom"];
+const _ = require('./index');
 
 const map = function(array, callback) {
   const results = []; // CREATE EMPTY ARRAY TO HOLD THE CHANGES AFTER APPLYING CALLBACK FUNCTION
@@ -8,50 +8,41 @@ const map = function(array, callback) {
   return results;
 };
 
-const padEE = function(word) { // FUNCTION TO PAD END OF WORD WITH THE LETTER 'E' UP TO 10 CHARACTERS
-  return word.padEnd(10, 'e');
-};
+module.exports = map;
 
-const replaceLetterO = function(word) { // FUNCTION TO REPLACE EACH LETTER 'O' WITH DONUT EMOJI
-  return word.replace('o', '🍩');
-};
+// TEST CODE
 
-const toUpperCase = function(word) { // FUNCTION TO CHANGE STRING TO UPPERCASE
-  return word.toLocaleUpperCase('en-CA');
-};
+// const words = ["ground", "control", "to", "major", "tom"];
 
-const assertArraysEqual = (first, second) => { // compare arrays using the eqArrays function
-  const eqArrays = (first, second) => {
-    let firstString = first.toString();
-    let secondString = second.toString();
-    if (firstString === secondString) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-  console.log(`Are these two arrays the same? Answer: ${eqArrays(first, second)}`);
-};
+// const padEE = function(word) { // FUNCTION TO PAD END OF WORD WITH THE LETTER 'E' UP TO 10 CHARACTERS
+//   return word.padEnd(10, 'e');
+// };
 
-const results1 = [
-  'groundeeee',
-  'controleee',
-  'toeeeeeeee',
-  'majoreeeee',
-  'tomeeeeeee'
-];
+// const replaceLetterO = function(word) { // FUNCTION TO REPLACE EACH LETTER 'O' WITH DONUT EMOJI
+//   return word.replace('o', '🍩');
+// };
 
-const results2 = [ 'gr🍩und', 'c🍩ntrol', 't🍩', 'maj🍩r', 't🍩m' ];
+// const toUpperCase = function(word) { // FUNCTION TO CHANGE STRING TO UPPERCASE
+//   return word.toLocaleUpperCase('en-CA');
+// };
 
-const results3 = [ 'GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM' ];
+// const results1 = [
+//   'groundeeee',
+//   'controleee',
+//   'toeeeeeeee',
+//   'majoreeeee',
+//   'tomeeeeeee'
+// ];
 
-console.log(map(words, padEE));
-assertArraysEqual((map(words, padEE)), results1);
+// const results2 = [ 'gr🍩und', 'c🍩ntrol', 't🍩', 'maj🍩r', 't🍩m' ];
 
-console.log(map(words, replaceLetterO));
-assertArraysEqual((map(words, replaceLetterO)), results2);
+// const results3 = [ 'GROUND', 'CONTROL', 'TO', 'MAJOR', 'TOM' ];
 
-console.log(map(words, toUpperCase));
-assertArraysEqual((map(words, toUpperCase)), results3);
+// console.log(map(words, padEE));
+// _.assertArraysEqual((map(words, padEE)), results1);
 
+// console.log(map(words, replaceLetterO));
+// _.assertArraysEqual((map(words, replaceLetterO)), results2);
 
+// console.log(map(words, toUpperCase));
+// _.assertArraysEqual((map(words, toUpperCase)), results3);

@@ -1,6 +1,4 @@
-const assertEqual = function(actual, expected) {
-  actual === expected ? console.log(`🥳 Assertion Passed: ${actual} === ${expected}`) : console.log("🤬 Assertion Failed: " + actual + " !== " + expected);  // TERNARY OPERATOR
-};
+const _ = require('./index');
 
 const findKey = function(object, callback) {
   let truthyValues = []; // create empty array for truthy results
@@ -16,22 +14,24 @@ const findKey = function(object, callback) {
   }
 };
 
-findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2) // => "noma"
+module.exports = findKey;
 
-assertEqual(findKey({
-  "Blue Hill": { stars: 1 },
-  "Akaleri":   { stars: 3 },
-  "noma":      { stars: 2 },
-  "elBulli":   { stars: 3 },
-  "Ora":       { stars: 2 },
-  "Akelarre":  { stars: 3 }
-}, x => x.stars === 2), 'noma');
+// TEST CODE
 
-    
+// findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => x.stars === 2) // => "noma"
+
+// _.assertEqual(findKey({
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri":   { stars: 3 },
+//   "noma":      { stars: 2 },
+//   "elBulli":   { stars: 3 },
+//   "Ora":       { stars: 2 },
+//   "Akelarre":  { stars: 3 }
+// }, x => x.stars === 2), 'noma');

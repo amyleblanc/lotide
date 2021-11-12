@@ -1,6 +1,4 @@
-const assertEqual = function(actual, expected) {
-  actual === expected ? console.log(`🥳 Assertion Passed: ${actual} === ${expected}`) : console.log("🤬 Assertion Failed: " + actual + " !== " + expected);  // TERNARY OPERATOR
-};
+const _ = require('./index');
 
 const countLetters = function(sentence) {
   let numOfLetters = {};
@@ -20,20 +18,20 @@ module.exports = countLetters;
 
 // TEST CODE:
 
-console.log(countLetters('hello')); // { h: 1, e: 1, l: 2, o: 1 }
-console.log(countLetters('Hi, how are you?')); // { H: 1, i: 1, h: 1, o: 2, w: 1, a: 1, r: 1, e: 1, y: 1, u: 1 }
-console.log(countLetters('I am quite well, thank you! How are you?'));
+// console.log(countLetters('hello')); // { h: 1, e: 1, l: 2, o: 1 }
+// console.log(countLetters('Hi, how are you?')); // { H: 1, i: 1, h: 1, o: 2, w: 1, a: 1, r: 1, e: 1, y: 1, u: 1 }
+// console.log(countLetters('I am quite well, thank you! How are you?'));
 
 
-const result1 = countLetters('hello');
+// const result1 = countLetters('hello');
 
-assertEqual((result1['l']), 2); // { l: 2 }
-assertEqual((result1['h']), 1); // { h: 1 }
+// _.assertEqual((result1['l']), 2); // { l: 2 }
+// _.assertEqual((result1['h']), 1); // { h: 1 }
 
-const result2 = countLetters('Hi, how are you?');
+// const result2 = countLetters('Hi, how are you?');
 
-assertEqual((result2['o']), 2); // { o: 2 }
+// _.assertEqual((result2['o']), 2); // { o: 2 }
 
-const result3 = countLetters('I am quite well, thank you! How are you?');
+// const result3 = countLetters('I am quite well, thank you! How are you?');
 
-assertEqual((result3['e']), 3); // { e: 3 }
+// _.assertEqual((result3['e']), 3); // { e: 3 }

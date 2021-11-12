@@ -1,3 +1,5 @@
+const _ = require('./index');
+
 const letterPositions = function(sentence) {
   const results = {};
   for (let i = 0; i < sentence.length; i++) {
@@ -10,28 +12,12 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+module.exports = letterPositions;
+
 // TEST CODE:
 
-const assertEqual = function(actual, expected) {
-  actual === expected ? console.log(`🥳 Assertion Passed: ${actual} === ${expected}`) : console.log("🤬 Assertion Failed: " + actual + " !== " + expected);  // TERNARY OPERATOR
-};
+// console.log(letterPositions('hello'));
+// console.log(letterPositions('successful'));
 
-const assertArraysEqual = (first, second) => { // compare arrays using the eqArrays function
-  const eqArrays = (first, second) => {
-    let firstString = first.toString();
-    let secondString = second.toString();
-    if (firstString === secondString) {
-      return true;
-    } else {
-      return false;
-    }
-  };
-  console.log(`Are these two arrays the same? Answer: ${eqArrays(first, second)}`);
-};
-
-console.log(letterPositions('hello'));
-console.log(letterPositions('successful'));
-
-assertArraysEqual(letterPositions('hello')['e'], [1]);
-assertArraysEqual(letterPositions('successful')['s'], [0, 5, 6]);
-
+// _.assertArraysEqual(letterPositions('hello')['e'], [1]);
+// _.assertArraysEqual(letterPositions('successful')['s'], [0, 5, 6]);
