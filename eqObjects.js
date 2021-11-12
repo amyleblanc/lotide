@@ -4,24 +4,25 @@ const eqObjects = function(object1, object2) {
   const object1Array = Object.keys(object1);
   const object2Array = Object.keys(object2);
   if (object1Array.length !== object2Array.length) {
-    console.log(false);
+    // console.log(false);
     return false;
   }
   for (let key of object1Array) {
     if (Array.isArray(object1[key])) {
-      if (eqArrays(object1[key], object2[key])) {
+      const _ = require('./index'); // is this required here or just at the start of the file?
+      if (_.eqArrays(object1[key], object2[key])) {
         continue;
       } else {
-        console.log(false);
+        // console.log(false);
         return false;
       }
     }
     if (object1[key] !== object2[key]) {
-      console.log(false);
+      // console.log(false);
       return false;
     }
   }
-  console.log(true);
+  // console.log(true);
   return true;
 };
 
@@ -47,7 +48,7 @@ module.exports = eqObjects;
 // eqObjects(ab, abc); // => false
 // _.assertEqual(eqObjects(ab, abc), false); // PASS
 
-//--------------------------
+// // --------------------------
 
 // const hero1 = {
 //   name: 'Batman',

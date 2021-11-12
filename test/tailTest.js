@@ -13,6 +13,6 @@ describe('#tail', () => {
 
   it("returns ['House', 'Labs'] for ['Light', 'House', 'Labs']", () => {
     assert.deepEqual(_.tail(['Light', 'House', 'Labs']), ['House', 'Labs']);
-  })
+  });
 
 });

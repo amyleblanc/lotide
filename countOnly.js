@@ -1,3 +1,5 @@
+const _ = require('./index');
+
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
   for (const item of allItems) {
@@ -15,7 +17,6 @@ const countOnly = function(allItems, itemsToCount) {
 module.exports = countOnly;
 
 // TEST CODE
-// const _ = require('./index');
 
 // const firstNames = [
 //   "Karl",
