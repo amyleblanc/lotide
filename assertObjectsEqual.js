@@ -17,5 +17,5 @@ module.exports = assertObjectsEqual;
 // const object2 = { a: 1, b: 2, c: 3 };
 // const object3 = { a: 2, b: 2, c: 2 };
 
-// assertObjectsEqual(object1, object2); // pass
-// assertObjectsEqual(object2, object3); // fail
+// assertObjectsEqual(object1, object2); // PASS
+// assertObjectsEqual(object2, object3); // FAIL

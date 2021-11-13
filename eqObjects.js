@@ -1,17 +1,16 @@
 const _ = require('./index');
 
 const eqObjects = function(object1, object2) {
-  const object1Array = Object.keys(object1);
-  const object2Array = Object.keys(object2);
-  if (object1Array.length !== object2Array.length) {
+  const object1Array = Object.keys(object1); // Convert object 1 to an array
+  const object2Array = Object.keys(object2); // Convert object 2 to an array
+  if (object1Array.length !== object2Array.length) { // If the number of array elements do not match, return false
     // console.log(false);
     return false;
   }
-  for (let key of object1Array) {
-    if (Array.isArray(object1[key])) {
-      const _ = require('./index'); // is this required here or just at the start of the file?
-      if (_.eqArrays(object1[key], object2[key])) {
-        continue;
+  for (let key of object1Array) { // Loop through array
+    if (Array.isArray(object1[key])) { // if the key value is an array,
+      if (_.eqArrays(object1[key], object2[key])) { // and if the array equals the other objects key value array...
+        continue; // ...continue to the next if statement unless, should they not match move to else
       } else {
         // console.log(false);
         return false;
@@ -64,5 +63,5 @@ module.exports = eqObjects;
 
 // eqObjects(hero1, hero2);
 // eqObjects(hero1, hero3);
-// _.assertEqual(eqObjects(hero1, hero2), true);
-// _.assertEqual(eqObjects(hero1, hero3), false);
+// _.assertEqual(eqObjects(hero1, hero2), true); // PASS
+// _.assertEqual(eqObjects(hero1, hero3), false); // PASS
