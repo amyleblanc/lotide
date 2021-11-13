@@ -1,4 +1,4 @@
-// const _ = require('./index');
+// const _ = require('./index'); // **NB** UNCOMMENT WHEN USING TEST CODE
 
 const map = function(array, callback) {
   const results = []; // CREATE EMPTY ARRAY TO HOLD THE CHANGES AFTER APPLYING CALLBACK FUNCTION
