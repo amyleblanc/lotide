@@ -1,4 +1,4 @@
-const _ = require('./index');
+// const _ = require('./index'); // **NB** UNCOMMENT WHEN USING TEST CODE
 
 const findKey = function(object, callback) {
   let truthyValues = []; // create empty array for truthy results

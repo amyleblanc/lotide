@@ -1,4 +1,4 @@
-const _ = require('./index');
+// const _ = require('./index'); // **NB** UNCOMMENT WHEN USING TEST CODE
 
 const findKeyByValue = function(object, test) {
   for (const key of Object.keys(object)) { // Loop through keys of object

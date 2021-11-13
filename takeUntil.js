@@ -1,4 +1,4 @@
-const _ = require('./index');
+// const _ = require('./index'); // **NB** UNCOMMENT WHEN USING TEST CODE
 
 const takeUntil = function(array, callback) {
   let newArray = []; // create empty array to contain eventual result

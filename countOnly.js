@@ -1,4 +1,4 @@
-const _ = require('./index');
+// const _ = require('./index'); // **NB** UNCOMMENT WHEN USING TEST CODE
 
 const countOnly = function(allItems, itemsToCount) {
   const results = {};

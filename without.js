@@ -1,4 +1,4 @@
-const _ = require('./index');
+// const _ = require('./index'); // **NB** UNCOMMENT WHEN USING TEST CODE
 
 const without = (source, itemsToRemove) => {
   let goodStuff = [...source]; // used spread operator to ensure source array is not modified N.B. NOT to be used with nested arrays
