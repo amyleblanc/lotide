@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@amyleblanc/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Lighthouse Labs Project: Mini clone of the [Lodash](https://lodash.com) library.",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/amyleblanc/lotide.git"
   },
-  "author": "",
+  "author": "@amyleblanc",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/amyleblanc/lotide/issues"
