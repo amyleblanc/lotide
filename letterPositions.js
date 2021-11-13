@@ -1,12 +1,12 @@
 const _ = require('./index');
 
 const letterPositions = function(sentence) {
-  const results = {};
-  for (let i = 0; i < sentence.length; i++) {
-    if (results[sentence[i]]) {
-      results[sentence[i]].push(i); // if it does exist, push new value
+  const results = {}; // create empty object to contain eventual result
+  for (let letter in sentence) { // loop through string indices
+    if (results[sentence[letter]]) { // check if the letter element exists as a key within "results" object
+      results[sentence[letter]].push(letter); // if it does exist, push index to the value 
     } else {
-      results[sentence[i]] = [i]; // if it does not exist, create a new key: value pair
+      results[sentence[letter]] = [letter]; // if it does not exist, create a new key: value pair
     }
   }
   return results;
