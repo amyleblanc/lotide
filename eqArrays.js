@@ -1,13 +1,18 @@
-const eqArrays = (first, second) => {
-  if (Array.isArray(first) === true && Array.isArray(second) === true) { // Seun O. suggested concept of using Array.isArray. I implemented this code myself.
-    let firstString = first.toString(); // Convert first array to a string
-    let secondString = second.toString(); // Convert second array to a string
-    if (firstString === secondString) { // If both strings are equal, then the arrays are also equal
-      return true;
-    } else {
+const eqArrays = (firstArr, secondArr) => {
+  if (firstArr.length !== secondArr.length) {
+    return false;
+  }
+  for (let i = 0; i < firstArr.length; i++) {
+    if (Array.isArray(firstArr[i]) && Array.isArray(secondArr[i])) { // Check for nested arrays
+      if (eqArrays(firstArr[i], secondArr[i])) { // Use eqArrays() recursively to compare nested array values
+        continue;
+      }
+    }
+    if (firstArr[i] !== secondArr[i]) { // Check if element at index 'i' of each array is equal
       return false;
     }
   }
+  return true;
 };
 
 module.exports = eqArrays;
