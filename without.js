@@ -1,5 +1,3 @@
-// const _ = require('./index'); // **NB** UNCOMMENT WHEN USING TEST CODE
-
 const without = (source, itemsToRemove) => {
   let goodStuff = [...source]; // used spread operator to ensure source array is not modified N.B. NOT to be used with nested arrays
   let badStuff = itemsToRemove;
@@ -10,23 +8,7 @@ const without = (source, itemsToRemove) => {
       }
     }
   }
-  console.log(goodStuff);
+  return goodStuff;
 };
 
 module.exports = without;
-
-// TEST CODE:
-
-// without([1, 2, 3], [1]); // => [2, 3]
-// without(["1", "2", "3"], [1, 2, "3"]); // => ["1", "2"]
-// without(['chocolate', 'hard candy', 'chips'], ['hard candy']); // => ['chocolate', 'chips']
-
-// console.log('---');
-
-// const words = ["hello", "world", "lighthouse"];
-// without(words, ["lighthouse"]); // no need to capture return value for this test case
-
-// console.log('---');
-
-// // Make sure the original array was not altered by the without function
-// _.assertArraysEqual(words, ["hello", "world", "lighthouse"]); // True
